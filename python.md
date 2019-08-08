@@ -15,7 +15,9 @@
 
 ## Testing
 
-`unittest` supports distinguishing test iterations (will not exit on first failed test), i.e.:
+* show available fixtures: `pytest --fixtures test_simplefactory.py`
+
+* `unittest` supports distinguishing test iterations (will not exit on first failed test), i.e.:
 
 ```python
 class NumbersTest(unittest.TestCase):
