@@ -16,6 +16,7 @@
 ## Testing
 
 `unittest` supports distinguishing test iterations (will not exit on first failed test), i.e.:
+
 ```python
 class NumbersTest(unittest.TestCase):
 
@@ -29,7 +30,6 @@ class NumbersTest(unittest.TestCase):
 ```
 
 will produce
-
 
 ```bash
 ======================================================================
