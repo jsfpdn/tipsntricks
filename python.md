@@ -8,6 +8,26 @@
 > pip install virtualenvwrapper
 ```
 
+## Switching between python3.6 and python3.7 with brew
+
+```bash
+> brew unlink python
+> brew install --ignore-dependencies https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
+```
+
+* to switch between different version use `brew switch python3.x.y`
+
+## Fix ``dyld: Library not loaded: @executable_path/../.Python``
+
+* all symlinks in `pyenv` directorie are invalid,
+  you need to delete all of them and create new ones:
+
+```bash
+> find ~/.virtualenvs/my-virtual-env l # this shows the symlinks
+> find ~/.virtualenvs/my-virtual-env l -delete
+> virtualenv ~/.virtualenvs/my-virtual-env
+```
+
 ## Libs
 
 * psycopg2: `env LDFLAGS="-I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib" pip3 --no-cache install psycopg2`
