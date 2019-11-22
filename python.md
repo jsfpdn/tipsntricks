@@ -8,6 +8,15 @@
 > pip install virtualenvwrapper
 ```
 
+## Installing Python 3.7.5 with pyenv not working
+
+```bash
+CFLAGS="-I$(brew --prefix readline)/include -I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include" \
+LDFLAGS="-L$(brew --prefix readline)/lib -L$(brew --prefix openssl)/lib" \
+PYTHON_CONFIGURE_OPTS=--enable-unicode=ucs2 \
+pyenv install -v 3.7.5
+```
+
 ## Switching between python3.6 and python3.7 with brew
 
 ```bash
